@@ -7,3 +7,13 @@
 	padding-top: 30px;
 }
 
+.ans {
+	font-weight:bold;
+	font-style:italic;
+	font-size:120%;
+
+}
+
+.em {
+	font-style:italic;
+}

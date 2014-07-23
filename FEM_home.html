@@ -2,8 +2,8 @@
 <html>
 <head>
 <!--BOOTSTRAP-->	
-        <!--CSS overrides-->
-        <link rel="stylesheet" href="main.css">
+    <!--CSS overrides-->
+    <link rel="stylesheet" href="main.css">
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -45,8 +45,10 @@
 			  <div class="panel-body">
 			    <h3>Beam length:</h3>
 			    <input id="l" type="text" placeholder="l (m)"><br>
-				<h4 id="currentLoads"><em>No loads currently added.</em></h4>
+				<h4 class="em" id="currentLoads">No loads currently added.</h4>
 				<p id="loading"><p>
+				<p class="text-success ans" id="MFAB"></p><br>
+				<p class="text-success ans" id="MFBA"></p>
 			  </div>
 			</div>	
 		</div>
@@ -61,21 +63,18 @@
 					<input name="img" id="udl_1" type="radio"><img src="udl_1.png" width="300"><br>
 					<input name="img" id="udl_2" type="radio"><img src="udl_2.png" width="300"><br>
 
-					<input id="W" type="text" placeholder="W (kN)"><br>
-					<input id="a" type="text" placeholder="alpha (decimal)"><br>
+					<input id="W" class="form-control" type="text" placeholder="W (kN)"><br>
+					<input id="a" class="form-control" type="text" placeholder="alpha (decimal)"><br>
 				</form>
 				<button class="btn btn-default" onclick="addLoad()">Add load</button>
 				<button class="btn btn-default" onclick="reset()">Reset</button>
 				<button class="btn btn-default" onclick="calc()">Calculate</button>
-
-				<h3 id="MFAB"></h3>
-				<h3 id="MFBA"></h3>
-				<p id="test"></p>
 			  </div>
 			</div>			
 		</div>
 		<footer>
-			&copy; Clara Jordan 2014 <span class="text-muted">Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript</span> 
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+			<span class="text-muted"> Fixed End Moment Calculator by Clara Jordan (czmj). Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript</span>
 		</footer>
 
 

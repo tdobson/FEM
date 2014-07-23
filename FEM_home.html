@@ -2,32 +2,50 @@
 <html>
 <head>
 <!--BOOTSTRAP-->	
+        <!--CSS overrides-->
+        <link rel="stylesheet" href="main.css">
+
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-	<!--CSS overrides-->
-	<link rel="stylesheet" scr="main.css">
-
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<title>FEM Calculation App</title>
+
+<!-- END BOOTSTRAP -->
+
 <!--FEM script-->
 	<script type="text/javascript" src="FEM.js"></script>	
 </head>
 
 <body>
 	<div class="container">
-		<div class="col-md-12">
-			<h1>FEMs for restrained beams</h1>
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FEM Calculation App</a>				
+				</div>
+			</div>
+		</nav>		
+
+		<div class="page-header">
+			<h1 class="text-center">FEMs for restrained beams</h1>
 		</div>
+
 		<div class="col-md-3">
 			<div class="panel panel-default">
 			  <div class="panel-body">
 			    <h3>Beam length:</h3>
 			    <input id="l" type="text" placeholder="l (m)"><br>
-				<h3 id="currentLoads">No loads currently added.</h3>
+				<h4 id="currentLoads"><em>No loads currently added.</em></h4>
 				<p id="loading"><p>
 			  </div>
 			</div>	
@@ -56,5 +74,10 @@
 			  </div>
 			</div>			
 		</div>
+		<footer>
+			&copy; Clara Jordan 2014 <span class="text-muted">Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript</span> 
+		</footer>
+
+
 	</div>
 </body>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--BOOTSTRAP-->	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!--CSS overrides-->
+	<link rel="stylesheet" scr="main.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!--FEM script-->
+	<script type="text/javascript" src="FEM.js"></script>	
+</head>
+
+<body>
+	<div class="container">
+		<div class="col-md-12">
+			<h1>FEMs for restrained beams</h1>
+		</div>
+		<div class="col-md-3">
+			<div class="panel panel-default">
+			  <div class="panel-body">
+			    <h3>Beam length:</h3>
+			    <input id="l" type="text" placeholder="l (m)"><br>
+				<h3 id="currentLoads">No loads currently added.</h3>
+				<p id="loading"><p>
+			  </div>
+			</div>	
+		</div>
+		<div class="col-md-9">
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Add a load:</h3>
+			  </div>
+			  <div class="panel-body">
+			    <form>
+					<input name="img" id="pload" type="radio"><img src="pload.png" width="300">
+					<input name="img" id="udl_1" type="radio"><img src="udl_1.png" width="300"><br>
+					<input name="img" id="udl_2" type="radio"><img src="udl_2.png" width="300"><br>
+
+					<input id="W" type="text" placeholder="W (kN)"><br>
+					<input id="a" type="text" placeholder="alpha (decimal)"><br>
+				</form>
+				<button class="btn btn-default" onclick="addLoad()">Add load</button>
+				<button class="btn btn-default" onclick="reset()">Reset</button>
+				<button class="btn btn-default" onclick="calc()">Calculate</button>
+
+				<h3 id="MFAB"></h3>
+				<h3 id="MFBA"></h3>
+				<p id="test"></p>
+			  </div>
+			</div>			
+		</div>
+	</div>
+</body>

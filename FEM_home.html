@@ -19,8 +19,6 @@
 
 <title>FEM Calculation App</title>
 
-<!-- END BOOTSTRAP -->
-
 <!--FEM script-->
 	<script type="text/javascript" src="FEM.js"></script>	
 </head>
@@ -40,43 +38,58 @@
 			<h1 class="text-center">FEMs for restrained beams</h1>
 		</div>
 
-		<div class="col-md-3">
+		<div class="col-md-3"> <!--Setup panel-->
 			<div class="panel panel-default">
-			  <div class="panel-body">
-			    <h3>Beam length:</h3>
-			    <input id="l" type="text" placeholder="l (m)"><br>
-				<h4 class="em" id="currentLoads">No loads currently added.</h4>
-				<p id="loading"><p>
-				<p class="text-success ans" id="MFAB"></p><br>
-				<p class="text-success ans" id="MFBA"></p>
-			  </div>
+			  	<h3>Beam length:</h3>
+			    <input id="l" class="form-control" type="text" placeholder="l (m)"><br>
 			</div>	
 		</div>
-		<div class="col-md-9">
+		<div class="col-md-9"> <!--Add a load panel-->
 			<div class="panel panel-primary">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">Add a load:</h3>
-			  </div>
-			  <div class="panel-body">
-			    <form>
-					<input name="img" id="pload" type="radio"><img src="pload.png" width="300">
-					<input name="img" id="udl_1" type="radio"><img src="udl_1.png" width="300"><br>
-					<input name="img" id="udl_2" type="radio"><img src="udl_2.png" width="300"><br>
-
-					<input id="W" class="form-control" type="text" placeholder="W (kN)"><br>
-					<input id="a" class="form-control" type="text" placeholder="alpha (decimal)"><br>
-				</form>
-				<button class="btn btn-default" onclick="addLoad()">Add load</button>
-				<button class="btn btn-default" onclick="reset()">Reset</button>
-				<button class="btn btn-default" onclick="calc()">Calculate</button>
+			  	<div class="panel-heading">
+				    <h3 class="panel-title">Add a load:</h3>
+				</div>
+				<div class="panel-body">
+				  	<form class="form-horizontal" role="form">
+				  		<div class="container col-md-6">
+				  			<label><input name="img" id="pload" type="radio"><img src="pload.png" class="models"></label>
+							<label><input name="img" id="udl_1" type="radio"><img src="udl_1.png" class="models"></label>
+							<label><input name="img" id="udl_1r" type="radio"><img src="udl_1r.png" class="models"></label>
+						</div>
+						<div class="container col-md-6">
+							<label><input name="img" id="udl_2" type="radio"><img src="udl_2.png" class="models"></label>
+							<label><input name="img" id="mom" type="radio"><img src="mom.png" class="models"></label>
+						</div>
+						<div class="container col-md-12">
+						    <label for="W" class="col-sm-2 control-label">W (kN)</label>
+						    <div class="col-sm-10">
+						    	<input id="W" class="form-control" type="text" placeholder="W (load in kN)"><br>
+						    </div>
+						    <label for="a" class="col-sm-2 control-label">alpha (decimal)</label>
+							<div class="col-sm-10">
+							   	<input id="a" class="form-control" type="text" placeholder="alpha"><br>
+						    </div>
+						</div>
+					</form>
+					<div class="container col-md-12">
+						<button class="btn btn-default" onclick="addLoad()">Add load</button>
+						<button class="btn btn-default" onclick="reset()">Reset</button>
+						<!--<button class="btn btn-default" onclick="calc()">Calculate</button>-->
+					</div>
+				</div>  
 			  </div>
 			</div>			
+		</div>
+
+		<div class="text-center"> <!--Results panel-->
+			<h4 class="em" id="currentLoads"></h4>
+			<p id="loading"><p>
+			<p class="text-success ans" id="MFAB"></p><br>
+			<p class="text-success ans" id="MFBA"></p>
 		</div>
 		<footer>
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
 			<span class="text-muted"> Fixed End Moment Calculator by Clara Jordan (czmj). Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript</span>
 		</footer>
-
-
-	</div>
+	</div> <!--end of container-->
 </body>

@@ -17,3 +17,36 @@
 .em {
 	font-style:italic;
 }
+
+.models{
+	padding:5%;
+	margin:5%;
+	width:100%;
+}
+
+/*Hide radio buttons and allow selecting images*/
+label > input{
+  display:none;
+}
+label > input + img{
+  cursor:pointer;
+  border:2px solid transparent;
+  border-radius: 15px;
+}
+label > input + img:hover{ 
+  outline:none;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+   box-shadow: 0 0 10px #3071a9;
+  -webkit-box-shadow: 0 0 10px #3071a9; 
+  -moz-box-shadow: 0 0 10px #3071a9;
+  border-radius: 15px;
+
+}
+label > input:checked + img{ 
+  box-shadow: 0 0 10px 3px #3071a9;
+  -webkit-box-shadow: 0 0 10px 3px #3071a9; 
+  -moz-box-shadow: 0 0 10px 3px #3071a9; 
+  border-radius: 15px;  
+}

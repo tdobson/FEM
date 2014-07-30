@@ -1,6 +1,6 @@
 FEM
 ===
 
-Clara's load calculating app
+Clara's fixed end moment calculating app
 
 Continuous deployment at http://files.tdobson.net/FEM

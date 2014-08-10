@@ -9,6 +9,11 @@
   	var MFBA=0;
  }
 
+//scroll
+function scrollInputs() {
+    location.hash = "#inputs";
+}
+
 //hide the data input field that aren't needed
 function hideValues(){
 	document.getElementById('W').type = "hidden"
@@ -28,7 +33,7 @@ function addLoad() {
 	var Wper2 =W/x2;
 
 	if (a>1 || isNaN(W) || isNaN(a) || isNaN(l)){
-		alert("Please check you have entered all values correctly");
+		alert("Please try again. Some values are not entered correctly.");
 	}else{
 		//Add to the number of loads recorded
 		count++;

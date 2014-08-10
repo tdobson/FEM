@@ -26,68 +26,72 @@
 <body>
 	<div class="container">
 
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--navbar-->
 			<div class="container">
 				<div class="navbar-header">
-					<a href="#" class="navbar-brand">FEM Calculation App</a>				
+					<a href="#" class="navbar-brand">Clara's Civ Calculators</a>			
 				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li class="active"><a href="#">FEMs</a></li>
+        			<li><a href="#">Other Thing</a></li>
+      			</ul>
 			</div>
 		</nav>		
 
 		<div class="page-header">
-			<h1 class="text-center">FEMs for restrained beams</h1>
+			<h1 class="text-center">Fixed End Moments for restrained beams</h1>
 		</div>
 
-		<div class="col-md-3"> <!--Setup panel-->
-			<div class="container col-md-12">
-			  	<h3>Beam length:</h3>
-			    <form><input id="l" class="form-control text" type="text" placeholder="l (m)"><br></form>
-			</div>	
-		</div>
-		<div class="col-md-9"> <!--Add a load panel-->
-			<div class="panel panel-primary">
-			  	<div class="panel-heading">
-				    <h3 class="panel-title">Add a load:</h3>
+		<div class="col-md-12"> <!--Add a load panel-->
+			<form class="form-horizontal" role="form">
+				<h2> Choose a load case:</h2></br>
+				<div class="container col-md-6"><!--Load cases column 1-->
+					<label><input name="img" id="pload" type="radio"><img src="pload.png" class="models" onclick="scrollInputs()"></label>
+					<label><input name="img" id="udl_1" type="radio"><img src="udl_1.png" class="models" onclick="scrollInputs()"></label>
+					<label><input name="img" id="udl_1r" type="radio"><img src="udl_1r.png" class="models" onclick="scrollInputs()"></label>
 				</div>
-				<div class="panel-body">
-				  	<form class="form-horizontal" role="form">
-				  		<div class="container col-md-6">
-				  			<label><input name="img" id="pload" type="radio"><img src="pload.png" class="models"></label>
-							<label><input name="img" id="udl_1" type="radio"><img src="udl_1.png" class="models"></label>
-							<label><input name="img" id="udl_1r" type="radio"><img src="udl_1r.png" class="models"></label>
-						</div>
-						<div class="container col-md-6">
-							<label><input name="img" id="udl_2" type="radio"><img src="udl_2.png" class="models"></label>
-							<label><input name="img" id="mom" type="radio"><img src="mom.png" class="models"></label>
-						</div>
-						<div class="container col-md-12">
-						    <label for="W" class="col-sm-2 control-label">W (kN)</label>
-						    <div class="col-sm-10">
-						    	<input id="W" class="form-control text" type="text" placeholder="W (load in kN)"><br>
-						    </div>
-						    <label for="a" class="col-sm-2 control-label">alpha (decimal)</label>
-							<div class="col-sm-10">
-							   	<input id="a" class="form-control text" type="text" placeholder="alpha"><br>
-						    </div>
-						</div>
+				<div class="container col-md-6"><!--Load cases colum 2-->
+					<label><input name="img" id="udl_2" type="radio"><img src="udl_2.png" class="models" onclick="scrollInputs()"></label>
+					<label><input name="img" id="mom" type="radio"><img src="mom.png" class="models" onclick="scrollInputs()"></label>
+				</div>
+				<div id="inputs" class="container col-md-12"><!--Value input-->
+					<form>
+						<label for="l" class="col-md-2 control-label">Beam length</label>
+				    	<div class="container col-md-9">
+				    		<div class="input-group">
+                    			<input id="l" class="form-control text" type="text" placeholder="Beam length (m)"><br>
+                    			<span class="input-group-addon">m</span>
+                			</div><br>
+						</div>	
+						<label for="W" class="col-md-2 control-label">W (kN)</label>
+					    <div class="col-md-9">
+					    	<div class="input-group">
+					    		<input id="W" class="form-control text" type="text" placeholder="W (load in kN)">
+					    		<span class="input-group-addon">kN</span>
+							</div><br>
+					    </div>
+					    <label for="a" class="col-md-2 control-label">alpha (decimal)</label>
+						<div class="col-md-10">
+						   	<input id="a" class="form-control text" type="text" placeholder="alpha (decimal length along beam)"><br>
+					    </div>
 					</form>
-					<div class="container col-md-12">
-						<button class="btn btn-default" onclick="addLoad()">Add load</button>
-						<button class="btn btn-default" onclick="reset()">Reset</button>
-						<!--<button class="btn btn-default" onclick="calc()">Calculate</button>-->
-					</div>
-				</div>  
-			  </div>
-			</div>			
+				</div>
+			</form>
+			<div class="container col-md-12"><!--buttons-->
+				<button class="btn btn-default" onclick="addLoad()">Add load</button>
+				<button class="btn btn-default" onclick="reset()">Reset</button>
+				<!--<button class="btn btn-default" onclick="calc()">Calculate</button>-->
+			</div>		
 		</div>
 
-		<div class="text-center"> <!--Results panel-->
+		<div class="text-center col-md-12"> <!--Results panel-->
 			<h4 class="em" id="currentLoads"></h4>
 			<p id="loading"><p>
 			<p class="text-success ans" id="MFAB"></p><br>
 			<p class="text-success ans" id="MFBA"></p>
 		</div>
-		<footer class="text-center">
+		<footer class="text-center col-md-12">
 			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
 
 			<span class="text-muted"> Fixed End Moment Calculator by Clara Jordan (czmj). Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript. <a href ="https://github.com/tdobson/FEM">Find it on GitHub!</a></span>

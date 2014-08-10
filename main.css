@@ -33,7 +33,7 @@ label > input{
 }
 label > input + img{
   cursor:pointer;
-  border:2px solid transparent;
+  border:1px solid transparent;
   border-radius: 15px;
 }
 label > input + img:hover{ 
@@ -41,15 +41,16 @@ label > input + img:hover{
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
-   box-shadow: 0 0 10px #3071a9;
-  -webkit-box-shadow: 0 0 10px #3071a9; 
-  -moz-box-shadow: 0 0 10px #3071a9;
+   box-shadow: 0 0 6px 3px #B2D2ED;
+  -webkit-box-shadow: 0 0 6px 3px #B2D2ED; 
+  -moz-box-shadow: 0 0 6px 3px #B2D2ED;
   border-radius: 15px;
 
 }
 label > input:checked + img{ 
-  box-shadow: 0 0 10px 3px #3071a9;
-  -webkit-box-shadow: 0 0 10px 3px #3071a9; 
-  -moz-box-shadow: 0 0 10px 3px #3071a9; 
-  border-radius: 15px;  
+  box-shadow: 0 0 7px 3px #79B8ED;
+  -webkit-box-shadow: 0 0 7px 3px #79B8ED; 
+  -moz-box-shadow: 0 0 7px 3px #79B8ED; 
+  border: solid 1px #51AEFC;
+  border-radius: 15px;
 }

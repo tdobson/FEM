@@ -56,10 +56,11 @@
 					<label><input name="img" id="mom" type="radio"><img src="mom.png" class="models" onclick="scrollInputs()"></label>
 				</div>
 				<div id="inputs" class="container col-md-12 form-group-lg"><!--Value input-->
+					<h2> Input values:</h2></br>
 					<form>
 						<div class="row">
 							<label for="l" class="col-md-2 control-label">Beam length</label>
-						    	<div class="col-xs-2 input-group">
+						    	<div class="col-xs-3 input-group">
 			                    			<input id="l" class="form-control text" type="text" placeholder="Beam length (m)"><br />
 		        	            			<span class="input-group-addon">m</span>
 	                				</div>
@@ -67,7 +68,7 @@
 						<br />
 						<div class="row">
 							<label for="W" class="col-md-2 control-label">W</label>
-							<div class="col-xs-2 input-group">
+							<div class="col-xs-3 input-group">
 						    		<input id="W" class="form-control text" type="text" placeholder="W (load in kN)"><br />
 						    		<span class="input-group-addon">kN</span>
 							</div>
@@ -75,9 +76,8 @@
 						<br />
 						<div class="row">
 							<label for="a" class="col-md-2 control-label">alpha</label>
-							<div class="col-xs-2 input-group">
+							<div class="col-xs-3 input-group">
 							   	<input id="a" class="form-control text" type="text" placeholder="alpha (decimal length along beam)"><br />
-                        	                                <span class="input-group-addon">decimal</span>
 							</div>
 						</div>
 					</form>
@@ -86,7 +86,6 @@
 			<div class="container col-md-12"><!--buttons-->
 				<button class="btn btn-default" onclick="addLoad()">Add load</button>
 				<button class="btn btn-default" onclick="reset()">Reset</button>
-				<!--<button class="btn btn-default" onclick="calc()">Calculate</button>-->
 			</div>		
 		</div>
 

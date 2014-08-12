@@ -54,3 +54,9 @@ label > input:checked + img{
   border: solid 1px #51AEFC;
   border-radius: 15px;
 }
+
+/*Style placeholder text*/
+::-webkit-input-placeholder {font-size:80%;}
+::-moz-placeholder {font-size:80%;} /* firefox 19+ */
+:-ms-input-placeholder {font-size:80%;} /* ie */
+input:-moz-placeholder {font-size:80%;}

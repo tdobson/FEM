@@ -97,3 +97,15 @@ function calc(){
 	document.getElementById('MFBA').innerHTML = "The FEM M"+"F".sub()+"BA = "+ MFBA+"kNm";
 }
 
+function calcPy(){
+	var startx = document.getElementById('startx').value;
+	var endx = document.getElementById('endx').value;
+	var starty = document.getElementById('starty').value;
+	var endy = document.getElementById('endy').value;
+	var startz = document.getElementById('startz').value;
+	var endz = document.getElementById('endz').value;
+	var PyAns = Math.sqrt((startx-endx)*(startx-endx)+(starty-endy)*(starty-endy)+(startz-endz)*(startz-endz));
+	document.getElementById('PyAns').innerHTML = parseFloat(PyAns).toFixed(4);;
+}
+
+

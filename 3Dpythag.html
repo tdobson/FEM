@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--BOOTSTRAP-->	
+    <!--CSS overrides-->
+    <link rel="stylesheet" href="main.css">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+
+<title>Clara's Calculators</title>
+
+<!--FEM script-->
+	<script type="text/javascript" src="FEM.js"></script>	
+</head>
+
+<body>
+	<div class="container">
+
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation"><!--navbar-->
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">Clara's Calculators</a>			
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      			<ul class="nav navbar-nav">
+        			<li><a href="index.html">FEMs</a></li>
+        			<li class="active"><a href="#">3D Pythagoras</a></li>
+      			</ul>
+			</div>
+		</nav>		
+
+		<div class="page-header">
+			<h1 class="text-center">3D Pythagoras</h1>
+		</div>
+
+		<div class="container col-md-7">
+			<div class="panel panel-primary"> <!--Add a load panel-->
+				<div class="panel-heading">
+					<h3 class="panel-title">Input coordinates:</h3></br>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal col-md-6" role="form">
+						<div id="inputs" class="container col-md-12 form-group-lg"><!--Value input-->
+							<div class="row">
+								<label for="startx" class="col-md-2 control-label">Start X</label>
+							    <div class="col-xs-10">
+		                    		<input id="startx" class="form-control text" type="text" placeholder="Start X">
+			                   	</div>
+							</div>
+							<br />
+							<div class="row">
+								<label for="starty" class="col-md-2 control-label">Start Y</label>
+								<div class="col-xs-10">
+								   	<input id="starty" class="form-control text" type="text" placeholder="Start Y">
+								</div>
+							</div>
+							</br>
+							<div class="row">
+								<label for="startz" class="col-md-2 control-label">Start Z</label>
+								<div class="col-xs-10">
+						    		<input id="startz" class="form-control text" type="text" placeholder="Start Z">
+						    	</div>
+							</div>
+							<br />
+						</form>
+					</div>
+					<form class="form-horizontal col-md-6" role="form">
+						<div id="inputs" class="container col-md-12 form-group-lg">
+							<div class="row">
+								<label for="endx" class="col-md-2 control-label">End X</label>
+								<div class="col-xs-10">
+						    		<input id="endx" class="form-control text" type="text" placeholder="End X">
+						    	</div>
+							</div>
+							<br />
+							<div class="row">
+								<label for="endy" class="col-md-2 control-label">End Y</label>
+							    	<div class="col-xs-10">
+		                    			<input id="endy" class="form-control text" type="text" placeholder="End Y">
+		   	                    	</div>
+							</div>
+							<br />
+							<div class="row">
+								<label for="endz" class="col-md-2 control-label">End Z</label>
+								<div class="col-xs-10">
+								   	<input id="endz" class="form-control text" type="text" placeholder="End Z">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4 text-center"><!--buttons-->
+			<button class="btn btn-default" onclick="calcPy()">Calculate</button></br>
+			<p class="text-success ans" id="PyAns">Answer</p><br>
+		</div>
+		<footer class="text-center col-md-12">
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />
+
+			<span class="text-muted"> Fixed End Moment Calculator by Clara Jordan (czmj). Built with Love in <a href="http://www.getbootstrap.com">Bootstrap</a> and Javascript. <a href ="https://github.com/tdobson/FEM">Find it on GitHub!</a></span>
+		</footer>
+	</div> <!--end of container-->
+</body>
+</html>
